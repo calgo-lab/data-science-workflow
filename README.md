@@ -44,7 +44,7 @@ Minimal flow:
 
 Published URL pattern:
 
-`https://<username>.github.io/<repo-name>/`
+https://calgo-lab.github.io/data-science-workflow
 
 ## Notes
 
