@@ -1,0 +1,25 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 149dfe00-db3c-47a4-95cf-774651f72ea5
+  title: Data Science Workflow
+  authors:
+    - name: Prof. Dr. Felix Bießmann
+  toc:
+    - file: intro.md
+    - file: session1_intro_data_acquisition.ipynb
+    - file: session2_cluster_experiment_logging.ipynb
+    - file: session3_data_exploration_quality.ipynb
+    - file: session4_model_training_evaluation.ipynb
+    - file: session5_dashboards_demos.ipynb
+  # description:
+  # keywords: []
+  # github:
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  exports:
+    - format: pdf
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
