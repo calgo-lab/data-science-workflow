@@ -35,8 +35,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-      - name: Setup Typst
-        uses: taiki-e/setup-typst@v2
       - name: Install Jupyter Book (via myst)
         run: npm install -g jupyter-book
       - name: Build PDF Assets
