@@ -41,21 +41,10 @@ jobs:
         run: jupyter-book build --pdf
       - name: Build HTML Assets
         run: jupyter-book build --html
-      - name: Prepare site artifact
-        run: |
-          rm -rf .pages
-          if [ -d "_build/site" ]; then
-            cp -R _build/site .pages
-          elif [ -d "_build/html" ]; then
-            cp -R _build/html .pages
-          else
-            echo "No HTML build output found in _build/site or _build/html"
-            exit 1
-          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './.pages'
+          path: './_build/html'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
