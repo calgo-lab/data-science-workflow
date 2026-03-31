@@ -16,10 +16,23 @@ project:
   # keywords: []
   # github:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  downloads:
+    - id: lecture-script
+      title: Lecture-Script (PDF)
   exports:
     - format: pdf
+      id: lecture-script
+      output: exports/data-science-workflow.pdf
+      articles:
+        - intro.md
+        - session1_intro_data_acquisition.ipynb
+        - session2_cluster_experiment_logging.ipynb
+        - session3_data_exploration_quality.ipynb
+        - session4_model_training_evaluation.ipynb
+        - session5_dashboards_demos.ipynb
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    favicon: calgo-lab-logo.ico
+    logo: calgo-lab-logo.png
+    logo_text: Data Science Workflow

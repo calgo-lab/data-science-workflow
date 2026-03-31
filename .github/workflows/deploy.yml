@@ -35,14 +35,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18.x
+      - name: Setup Typst
+        uses: taiki-e/setup-typst@v2
       - name: Install Jupyter Book (via myst)
         run: npm install -g jupyter-book
+      - name: Build PDF Assets
+        run: jupyter-book build --pdf
       - name: Build HTML Assets
         run: jupyter-book build --html
+      - name: Prepare site artifact
+        run: |
+          rm -rf .pages
+          if [ -d "_build/site" ]; then
+            cp -R _build/site .pages
+          elif [ -d "_build/html" ]; then
+            cp -R _build/html .pages
+          else
+            echo "No HTML build output found in _build/site or _build/html"
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './_build/html'
+          path: './.pages'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

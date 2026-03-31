@@ -22,3 +22,6 @@ _build/
 # Temporary / backups
 *.bak
 *.tmp
+
+# Exports
+exports/

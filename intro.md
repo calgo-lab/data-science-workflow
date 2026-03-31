@@ -1,12 +1,3 @@
----
-exports:
-  - format: pdf
-    id: intro-pdf
-downloads:
-  - id: intro-pdf
-    title: PDF
----
-
 # Data Science Workflow
 
 This Jupyter Book is the lecture material for DSW (Data Science Workflow) at BHT Berlin.
