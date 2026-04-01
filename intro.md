@@ -28,7 +28,7 @@ The final project will be an end-to-end data science workflow, developing a reco
 | Kubernetes Cluster | Deploy and manage experiments on our Kubernetes cluster. | 10 |
 | Experiments Logging | Log your experiments using Weights & Biases, including metrics, configurations, and hyperparameters. | 10 |
 | Vector Embeddings* | Create and use vector embeddings for items. | 10 |
-| Hyperparameter Tuning* | Optimize the hyperparameters of your machine learning models (e.g. Grid Search) using tools like optuna. | 10 |
+| Hyperparameter Tuning | Optimize the hyperparameters of your machine learning models (e.g. Grid Search) using tools like optuna. | 10 |
 | Recommender System* | Develop a recommender system using the collected data and embeddings. | 10 |
 | Performance Evaluation* | Evaluate the performance of your recommender system (Precision@k/Recall@k) using two methods (?). | 10 |
 | Perturbation Analysis | Analyze the robustness of your recommender system by introducing errors to the input data. | 10 |
