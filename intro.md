@@ -54,10 +54,6 @@ The final project will be an end-to-end data science workflow, developing a reco
 - **Discussion**: 5 minutes after the presentation.
 - **Markdown Report**: describing the workflow and work packages completed, with links to the respective sections in your repository showing your completion of the work packages.
 
-
-The final project should then be presented in 15mins at the end of the semester (date TBA) and a markdown report should be submitted, in which you describe your workflow and the work packages you completed. Please refer to the respective sections in your repository showing your completion of the work packages.
-The presentation format can be a Jupyter notebook, your Frontend application, or a slide deck.
-
 ### Evaluation Criteria
 You can choose whether you want to spend more effort on the data collection and preprocessing part, the modelling, the descriptive analysis or the user interaction part. A good project must not necessarily cover all work packages, but it should be well executed in the work packages that are covered. The criteria evaluated will be based on:
 
