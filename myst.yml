@@ -4,7 +4,12 @@ project:
   id: 149dfe00-db3c-47a4-95cf-774651f72ea5
   title: Data Science Workflow & Applications
   authors:
-    - name: Prof. Dr. Felix Bießmann
+    - name: Felix Bießmann
+      email: felix.biessmann@bht-berlin.de
+      affiliation: Berlin University of Applied Sciences
+    - name: Leonhard Liu
+      email: leonhard.liu@bht-berlin.de
+      affiliation: Berlin University of Applied Sciences
   toc:
     - file: intro.md
     - file: DSW-sessions/session1_data_acquisition.ipynb
