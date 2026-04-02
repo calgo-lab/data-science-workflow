@@ -2,21 +2,21 @@
 version: 1
 project:
   id: 149dfe00-db3c-47a4-95cf-774651f72ea5
-  title: Data Science Workflow
+  title: Data Science Workflow & Applications
   authors:
     - name: Prof. Dr. Felix Bießmann
   toc:
     - file: intro.md
-    - file: DSW/session1_data_acquisition.ipynb
-    - file: DSW/session2_cluster.ipynb
-    - file: DSW/session3_data_quality.ipynb
-    - file: DSW/session4_model_training_evaluation.ipynb
-    - file: DSW/session5_demos.ipynb
-    - file: DSA/lecture-06.md
-    - file: DSA/lecture-07.md
-    - file: DSA/lecture-08.md
-    - file: DSA/lecture-09.md
-    - file: DSA/lecture-10.md
+    - file: DSW-sessions/session1_data_acquisition.ipynb
+    - file: DSW-sessions/session2_cluster.ipynb
+    - file: DSW-sessions/session3_data_quality.ipynb
+    - file: DSW-sessions/session4_model_training_evaluation.ipynb
+    - file: DSW-sessions/session5_demos.ipynb
+    - file: DSA-sessions/lecture-06.md
+    - file: DSA-sessions/lecture-07.md
+    - file: DSA-sessions/lecture-08.md
+    - file: DSA-sessions/lecture-09.md
+    - file: DSA-sessions/lecture-10.md
   # description:
   # keywords: []
   # github:
@@ -30,14 +30,19 @@ project:
       output: exports/data-science-workflow.pdf
       articles:
         - intro.md
-        - DSW/session1_data_acquisition.ipynb
-        - DSW/session2_cluster.ipynb
-        - DSW/session3_data_quality.ipynb
-        - DSW/session4_model_training_evaluation.ipynb
-        - DSW/session5_demos.ipynb
+        - DSW-sessions/session1_data_acquisition.ipynb
+        - DSW-sessions/session2_cluster.ipynb
+        - DSW-sessions/session3_data_quality.ipynb
+        - DSW-sessions/session4_model_training_evaluation.ipynb
+        - DSW-sessions/session5_demos.ipynb
+        - DSA-sessions/lecture-06.md
+        - DSA-sessions/lecture-07.md
+        - DSA-sessions/lecture-08.md
+        - DSA-sessions/lecture-09.md
+        - DSA-sessions/lecture-10.md
 site:
   template: book-theme
   options:
-    favicon: calgo-lab-logo.ico
+    favicon: calgo-lab-logo.png
     logo: calgo-lab-logo.png
-    logo_text: Data Science Workflow
+    logo_text: Data Science Workflow & Applications

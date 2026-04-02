@@ -28,3 +28,5 @@ exports/
 
 # DSA working directory (notebooks, venv, datasets)
 DSA/
+old-felix/
+mds_from_teo/
