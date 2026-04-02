@@ -25,3 +25,6 @@ _build/
 
 # Exports
 exports/
+
+# DSA working directory (notebooks, venv, datasets)
+DSA/
