@@ -31,7 +31,7 @@ Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topic
 The final project will be an end-to-end data science workflow, developing a recommender system for a dataset of your choice. You will be expected to apply the concepts and tools covered in the lectures. Students may choose from the following work packages. Each work package will reward with a certain number of points, and students can choose to complete the work packages they want.
 
 ### Work Packages
-<span style="color: red;">[Vipin TODO: @Felix, @Leo Bitte helft hier, ob das mit den Punkten überhaupt Sinn macht. Ich dachte mir es wäre hilfreich klare Rahmen zu setzen, was erwartet wird.]</span>
+<span style="color: red;">[Vipin TODO: Bitte helft hier, ob das mit den Punkten überhaupt Sinn macht. Ich dachte mir es wäre hilfreich klare Rahmen zu setzen, was erwartet wird.]</span>
 
 | Work Package | Description | Points |
 |--------------|-------------|--------|
