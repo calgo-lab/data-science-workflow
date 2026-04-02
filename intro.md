@@ -16,6 +16,14 @@ Part 1 of the lecture *Data Science Workflow and Applications* will include 5 se
 
 Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topics around *Recommender Systems*.
 
+| Date        | Topics                                                                              |
+| ----------- | ----------------------------------------------------------------------------------- |
+| 14.05.2026  | [The Recommendation Problem](DSA/lecture-06.md)                                     |
+| 21.05.2026  | [Content-Based Methods](DSA/lecture-07.md)                                          |
+| 28.05.2026  | [Matrix Factorization & AutoRec](DSA/lecture-08.md)                                 |
+| 04.06.2026  | [Neural Embeddings & Semantic Search](DSA/lecture-09.md)                            |
+| 11.06.2026  | [Two-Tower, Evaluation & Retrieval](DSA/lecture-10.md)                              |
+
 ## Final Project
 
 The final project will be an end-to-end data science workflow, developing a recommender system for a dataset of your choice. You will be expected to apply the concepts and tools covered in the lectures. Students may choose from the following work packages. Each work package will reward with a certain number of points, and students can choose to complete the work packages they want. The required points for passing the course are 40, and the points to achieve a grade of 1.0 are 80 (?).
@@ -49,3 +57,6 @@ Links:
 - https://prof.bht-berlin.de/biessmann
 - https://www.digital-future.berlin/ueber-uns/professorinnen/prof-dr-felix-biessmann
 - https://calgo-lab.de
+
+Lecturer Leonhard Liu
+Haus E
