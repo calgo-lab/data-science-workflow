@@ -19,6 +19,9 @@ project:
   downloads:
     - id: lecture-script
       title: Lecture-Script (PDF)
+    - id: session1-books-data
+      file: downloads/books.csv
+      title: Scraped Books-Data
   exports:
     - format: pdf
       id: lecture-script
