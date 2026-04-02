@@ -2,6 +2,8 @@
 *Summer Term 2026* - BHT Berlin - Room: D 139 (?)<br>
 [Moodle Course](https://lms.bht-berlin.de/course/view.php?id=37443)
 
+This course will cover end-to-end lifecycle of a Data Science project. The course will be structured in two parts: the first part will cover more general data science workflow topics, teaching you about modern MLOps practices. The second part will be focused on recommender systems, where you will learn about different approaches to building recommendation engines. For your final project, you will be expected to apply the concepts and tools covered in the lectures to build a recommender system for a dataset of your choice (More under: [Final Project](#final-project)).
+
 ## Course Structure
 
 Part 1 of the lecture *Data Science Workflow and Applications* will include 5 sessions covering the following topics:
@@ -26,7 +28,10 @@ Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topic
 
 ## Final Project
 
-The final project will be an end-to-end data science workflow, developing a recommender system for a dataset of your choice. You will be expected to apply the concepts and tools covered in the lectures. Students may choose from the following work packages. Each work package will reward with a certain number of points, and students can choose to complete the work packages they want. The required points for passing the course are 40, and the points to achieve a grade of 1.0 are 80 (?).
+The final project will be an end-to-end data science workflow, developing a recommender system for a dataset of your choice. You will be expected to apply the concepts and tools covered in the lectures. Students may choose from the following work packages. Each work package will reward with a certain number of points, and students can choose to complete the work packages they want.
+
+### Work Packages
+<span style="color: red;">[Vipin TODO: @Felix, @Leo Bitte helft hier, ob das mit den Punkten überhaupt Sinn macht. Ich dachte mir es wäre hilfreich klare Rahmen zu setzen, was erwartet wird.]</span>
 
 | Work Package | Description | Points |
 |--------------|-------------|--------|
@@ -44,8 +49,22 @@ The final project will be an end-to-end data science workflow, developing a reco
 
 \* Mandatory work packages for all students.
 
+### Examination Modalities
+- **Project presentation**: 15 minutes presentation of the final project. Can be a Jupyter notebook, a slide deck, or your frontend application.
+- **Discussion**: 5 minutes after the presentation.
+- **Markdown Report**: describing the workflow and work packages completed, with links to the respective sections in your repository showing your completion of the work packages.
+
+
 The final project should then be presented in 15mins at the end of the semester (date TBA) and a markdown report should be submitted, in which you describe your workflow and the work packages you completed. Please refer to the respective sections in your repository showing your completion of the work packages.
 The presentation format can be a Jupyter notebook, your Frontend application, or a slide deck.
+
+### Evaluation Criteria
+You can choose whether you want to spend more effort on the data collection and preprocessing part, the modelling, the descriptive analysis or the user interaction part. A good project must not necessarily cover all work packages, but it should be well executed in the work packages that are covered. The criteria evaluated will be based on:
+
+- **Task difficulty**: a Kaggle task is less difficult in terms of data preparation and project structure than acquiring your own data set.
+- **Solution complexity**: aim for an appropriate tradeoff of algorithmic/computational complexity and quality of the solution.
+- **Structure and Quality of the presentation**
+
 
 ## Lecturer
 
@@ -58,5 +77,9 @@ Links:
 - https://www.digital-future.berlin/ueber-uns/professorinnen/prof-dr-felix-biessmann
 - https://calgo-lab.de
 
-Lecturer Leonhard Liu
-Haus E
+---
+
+M. Sc. Leonhard Liu<br>
+Haus Elsa-Neumann, E 3.011
+
+Mail: [leonhard.liu@bht-berlin.de](mailto:leonhard.liu@bht-berlin.de)

@@ -7,11 +7,16 @@ project:
     - name: Prof. Dr. Felix Bießmann
   toc:
     - file: intro.md
-    - file: session1_data_acquisition.ipynb
-    - file: session2_cluster.ipynb
-    - file: session3_data_quality.ipynb
-    - file: session4_model_training_evaluation.ipynb
-    - file: session5_demos.ipynb
+    - file: DSW/session1_data_acquisition.ipynb
+    - file: DSW/session2_cluster.ipynb
+    - file: DSW/session3_data_quality.ipynb
+    - file: DSW/session4_model_training_evaluation.ipynb
+    - file: DSW/session5_demos.ipynb
+    - file: DSA/lecture-06.md
+    - file: DSA/lecture-07.md
+    - file: DSA/lecture-08.md
+    - file: DSA/lecture-09.md
+    - file: DSA/lecture-10.md
   # description:
   # keywords: []
   # github:
@@ -19,20 +24,17 @@ project:
   downloads:
     - id: lecture-script
       title: Lecture-Script (PDF)
-    - id: session1-books-data
-      file: downloads/books.csv
-      title: Scraped Books-Data
   exports:
     - format: pdf
       id: lecture-script
       output: exports/data-science-workflow.pdf
       articles:
         - intro.md
-        - session1_data_acquisition.ipynb
-        - session2_cluster.ipynb
-        - session3_data_quality.ipynb
-        - session4_model_training_evaluation.ipynb
-        - session5_demos.ipynb
+        - DSW/session1_data_acquisition.ipynb
+        - DSW/session2_cluster.ipynb
+        - DSW/session3_data_quality.ipynb
+        - DSW/session4_model_training_evaluation.ipynb
+        - DSW/session5_demos.ipynb
 site:
   template: book-theme
   options:
