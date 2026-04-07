@@ -9,6 +9,7 @@ __pycache__/
 .venv/
 venv/
 .env
+.ipynb_checkpoints/
 
 # Jupyter Book / MyST build artifacts
 _build/

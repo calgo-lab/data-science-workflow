@@ -6,6 +6,8 @@ on:
   push:
     # Runs on pushes targeting the default branch
     branches: [main]
+    tags:
+      - 'v*'
 env:
   # `BASE_URL` determines, relative to the root of the domain, the URL that your site is served from.
   # E.g., if your site lives at `https://mydomain.org/myproject`, set `BASE_URL=/myproject`.
@@ -14,7 +16,7 @@ env:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -24,6 +26,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -51,10 +54,38 @@ jobs:
         run: jupyter-book build --pdf
       - name: Build HTML Assets
         run: jupyter-book build --html
+      - name: Build Reveal.js Slides
+        run: |
+          mkdir -p _build/slides
+          python -m pip install --upgrade pip nbconvert
+          find DSW-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/slides {}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'
+      - name: Upload slides artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: revealjs-slides
+          path: './_build/slides'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+      - name: Build Reveal.js Slides
+        run: |
+          python -m pip install --upgrade pip nbconvert
+          mkdir -p _build/slides
+          find DSW-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/slides {}
+          cd _build && zip -r revealjs-slides.zip slides >/dev/null
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: _build/revealjs-slides.zip
