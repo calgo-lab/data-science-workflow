@@ -56,9 +56,10 @@ jobs:
         run: jupyter-book build --html
       - name: Build Reveal.js Slides
         run: |
-          mkdir -p _build/slides
+          mkdir -p _build/slides _build/figures
           python -m pip install --upgrade pip nbconvert
           find DSW-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/slides {}
+          if [ -d figures ]; then cp -R figures/. _build/figures/; fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -67,7 +68,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: revealjs-slides
-          path: './_build/slides'
+          path: |
+            ./_build/slides
+            ./_build/figures
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
@@ -82,9 +85,15 @@ jobs:
       - name: Build Reveal.js Slides
         run: |
           python -m pip install --upgrade pip nbconvert
-          mkdir -p _build/slides
+          mkdir -p _build/slides _build/figures
           find DSW-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/slides {}
-          cd _build && zip -r revealjs-slides.zip slides >/dev/null
+          if [ -d figures ]; then cp -R figures/. _build/figures/; fi
+          cd _build
+          if [ -d figures ]; then
+            zip -r revealjs-slides.zip slides figures >/dev/null
+          else
+            zip -r revealjs-slides.zip slides >/dev/null
+          fi
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
