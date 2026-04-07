@@ -2,6 +2,17 @@
 *Summer Term 2026* - BHT Berlin - Room: D 139 (?)<br>
 [Moodle Course](https://lms.bht-berlin.de/course/view.php?id=37443)
 
+<table style="width: 100%; table-layout: fixed;">
+	<tr>
+		<td style="width: 50%; padding: 0 0.5rem;">
+			<img src="figures/ML_Acad.png" alt="ML in Academia" style="width: 100%; height: auto; display: block;" />
+		</td>
+		<td style="width: 50%; padding: 0 0.5rem;">
+			<img src="figures/ML_Prod.png" alt="ML in Production" style="width: 100%; height: auto; display: block;" />
+		</td>
+	</tr>
+</table>
+
 This course will cover end-to-end lifecycle of a Data Science project. The course will be structured in two parts: the first part will cover more general data science workflow topics, teaching you about modern MLOps practices. The second part will be focused on recommender systems, where you will learn about different approaches to building recommendation engines. For your final project, you will be expected to apply the concepts and tools covered in the lectures to build a recommender system for a dataset of your choice (More under: [Final Project](#final-project)).
 
 ## Course Structure
