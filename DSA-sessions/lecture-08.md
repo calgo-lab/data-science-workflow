@@ -1,4 +1,6 @@
-# Lecture 8: Matrix Factorization & AutoRec
+# Session 8: Matrix Factorization & AutoRec
+
+⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. You will find this message wherever the course materials are being updated / not finalized.</span> ⚠️
 
 ## Part 1 — SVD (from scratch)
 - Motivation: raw vectors are sparse and noisy — discover latent structure

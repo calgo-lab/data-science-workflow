@@ -1,4 +1,6 @@
-# Lecture 9: Neural Embeddings & Semantic Search
+# Session 9: Neural Embeddings & Semantic Search
+
+⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. You will find this message wherever the course materials are being updated / not finalized.</span> ⚠️
 
 - Bridge: SVD/AutoRec gave us embeddings — neural nets deliver better ones (Word2Vec → Sentence Transformers)
 - Inductive embeddings: any text can be embedded, even unseen items → cold start solved

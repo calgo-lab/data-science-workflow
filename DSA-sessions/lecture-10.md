@@ -1,4 +1,6 @@
-# Lecture 10: Two-Tower, Evaluation & Retrieval
+# Session 10: Two-Tower, Evaluation & Retrieval
+
+⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. You will find this message wherever the course materials are being updated / not finalized.</span> ⚠️
 
 ## Part 1 — Two-Tower Architecture
 - Two-Tower architecture: separate user and item encoders, dot-product scoring

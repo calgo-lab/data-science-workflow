@@ -1,4 +1,6 @@
-# Lecture 7: Content-Based Methods
+# Session 7: Content-Based Methods
+
+⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. You will find this message wherever the course materials are being updated / not finalized.</span> ⚠️
 
 - Feature matrices: items and users as attribute vectors
 - From data to vectors: text (TF-IDF / BoW), images, tabular data
