@@ -1,5 +1,5 @@
 openml==0.14.2
-scikit-learn==1.4.2
+scikit-learn==1.8.0
 pandas==2.2.2
 numpy==1.26.4
 matplotlib==3.9.0
@@ -10,3 +10,4 @@ lxml
 selenium
 scipy==1.13.0
 statsmodels==0.14.2
+wandb==0.25.1
