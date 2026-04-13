@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dsw
+  name: dsw-deployment
 spec:
   replicas: 1 # Creates a single pod that is automatically restarted on crash
   selector:
     matchLabels:
-      app: dsw
+      app: dsw-deployment
   template:
     metadata:
       labels:
-        app: dsw
+        app: dsw-deployment
     spec:
       containers:
-      - name: dsw
+      - name: dsw-deployment
         image: <your-dockerhub-username>/ssh-server-image:latest # Use your dockerhub username and image name
 
         securityContext:
