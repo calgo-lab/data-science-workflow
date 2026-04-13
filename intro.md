@@ -1,5 +1,6 @@
 # Data Science Workflow and Applications
-[Moodle Course](https://lms.bht-berlin.de/course/view.php?id=37443)
+
+Students enrolled at a Berlin University can register for the Course on the [Course Moodle Website](https://lms.bht-berlin.de/course/view.php?id=37443).
 
 <table style="width: 100%; table-layout: fixed;">
 	<tr>
@@ -12,7 +13,7 @@
 	</tr>
 </table>
 
-This course will cover end-to-end lifecycle of a Data Science project. The course will be structured in two parts: the first part will cover more general data science workflow topics, teaching you about modern MLOps practices. The second part will be focused on recommender systems, where you will learn about different approaches to building recommendation engines. For your final project, you will be expected to apply the concepts and tools covered in the lectures to build a recommender system for a dataset of your choice (More under: [Final Project](#final-project)).
+This course covers end-to-end lifecycle of a Data Science project. The course will be structured in two parts: the first part will cover more general data science workflow topics, teaching you about modern MLOps practices. The second part will be focused on recommender systems, where you will learn about different approaches to building recommendation engines. For your final project, you will be expected to apply the concepts and tools covered in the lectures to build a recommender system for a dataset of your choice (More under: [Final Project](#final-project)).
 
 ⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. You will find this message wherever the course materials are being updated / not finalized.</span> ⚠️
 
@@ -37,59 +38,3 @@ Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topic
 | 28.05.2026  | ⏳[Matrix Factorization & AutoRec](DSA-sessions/lecture-08.md)                                 |
 | 04.06.2026  | ⏳[Neural Embeddings & Semantic Search](DSA-sessions/lecture-09.md)                            |
 | 11.06.2026  | ⏳[Two-Tower, Evaluation & Retrieval](DSA-sessions/lecture-10.md)                              |
-
-## Final Project
-⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. The final project details are yet to be finalized. Look into the moodle course for updates.</span> ⚠️
-
-
-The final project will be an end-to-end data science workflow, developing a recommender system for a dataset of your choice. You will be expected to apply the concepts and tools covered in the lectures. Students may choose from the following work packages. Each work package will reward with a certain number of points, and students can choose to complete the work packages they want.
-
-### Work Packages
-
-| Work Package | Description | Points |
-|--------------|-------------|--------|
-| Data Scraping | Scrape (not download!) a dataset from a website or API, using tools like Beautiful Soup or Selenium. | 10 |
-| Data Annotation | Use Label Studio to annotate a dataset of at least X samples. | 10 |
-| Data Quality* | Define and apply data quality metrics to a dataset, identifying and addressing issues. | 10 |
-| Kubernetes Cluster | Deploy and manage experiments on our Kubernetes cluster. | 10 |
-| Experiments Logging* | Log your experiments using Weights & Biases, including metrics, configurations, and hyperparameters. | 10 |
-| Vector Embeddings* | Create and use vector embeddings for items. | 10 |
-| Hyperparameter Tuning | Optimize the hyperparameters of your machine learning models (e.g. Grid Search) using tools like optuna. | 10 |
-| Recommender System* | Develop a recommender system using the collected data and embeddings. | 10 |
-| Performance Evaluation* | Evaluate the performance of your recommender system (Precision@k/Recall@k) using two methods (?). | 10 |
-| Perturbation Analysis | Analyze the robustness of your recommender system by introducing errors to the input data. | 10 |
-| Frontend Application | Develop a frontend application (e.g. with Streamlit) to visualize and interact with your recommender system. | 10 |
-
-\* Mandatory work packages for all students.
-
-### Examination Modalities
-- **No Final Exam**: The grade will be based on project work only. 
-- **No Group Work**: Every student will have to work on and present their own project. 
-- **Supervision Session**: There will be a mandatory supervision session in which we will discuss your project w.r.t. the data, software components, tech stack, goals. This session will count 20% of your final grade. 
-- **Project presentation**: 10 mins presentation and 5 mins discussion of the final project, this will count 80% of your final grade
-
-### Evaluation Criteria
-You can choose whether you want to spend more effort on the data collection and preprocessing part, the modelling, the descriptive analysis or the user interaction part. A good project must not necessarily cover all work packages, but it should be well executed in the work packages that are covered. The criteria evaluated will be based on:
-
-- **Task difficulty**: a Kaggle task is less difficult in terms of data preparation and project structure than acquiring your own data set.
-- **Solution complexity**: aim for an appropriate tradeoff of algorithmic/computational complexity and quality of the solution.
-- **Structure and Quality of the presentation**
-
-
-## Lecturer
-
-Prof. Dr. Felix Bießmann<br>
-Haus Bauwesen, D 138
-
-Mail: [felix.biessmann@bht-berlin.de](mailto:felix.biessmann@bht-berlin.de)<br>
-Links:
-- https://prof.bht-berlin.de/biessmann
-- https://www.digital-future.berlin/ueber-uns/professorinnen/prof-dr-felix-biessmann
-- https://calgo-lab.de
-
----
-
-M. Sc. Leonhard Liu<br>
-Haus Elsa-Neumann, E 3.011
-
-Mail: [leonhard.liu@bht-berlin.de](mailto:leonhard.liu@bht-berlin.de)
