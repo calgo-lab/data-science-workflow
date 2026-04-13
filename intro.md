@@ -50,9 +50,9 @@ The final project will be an end-to-end data science workflow, developing a reco
 |--------------|-------------|--------|
 | Data Scraping | Scrape (not download!) a dataset from a website or API, using tools like Beautiful Soup or Selenium. | 10 |
 | Data Annotation | Use Label Studio to annotate a dataset of at least X samples. | 10 |
-| Data Quality | Define and apply data quality metrics to a dataset, identifying and addressing issues. | 10 |
+| Data Quality* | Define and apply data quality metrics to a dataset, identifying and addressing issues. | 10 |
 | Kubernetes Cluster | Deploy and manage experiments on our Kubernetes cluster. | 10 |
-| Experiments Logging | Log your experiments using Weights & Biases, including metrics, configurations, and hyperparameters. | 10 |
+| Experiments Logging* | Log your experiments using Weights & Biases, including metrics, configurations, and hyperparameters. | 10 |
 | Vector Embeddings* | Create and use vector embeddings for items. | 10 |
 | Hyperparameter Tuning | Optimize the hyperparameters of your machine learning models (e.g. Grid Search) using tools like optuna. | 10 |
 | Recommender System* | Develop a recommender system using the collected data and embeddings. | 10 |
@@ -63,9 +63,10 @@ The final project will be an end-to-end data science workflow, developing a reco
 \* Mandatory work packages for all students.
 
 ### Examination Modalities
-- **Project presentation**: 15 minutes presentation of the final project. Can be a Jupyter notebook, a slide deck, or your frontend application.
-- **Discussion**: 5 minutes after the presentation.
-- **Markdown Report**: describing the workflow and work packages completed, with links to the respective sections in your repository showing your completion of the work packages.
+- **No Final Exam**: The grade will be based on project work only. 
+- **No Group Work**: Every student will have to work on and present their own project. 
+- **Supervision Session**: There will be a mandatory supervision session in which we will discuss your project w.r.t. the data, software components, tech stack, goals. This session will count 20% of your final grade. 
+- **Project presentation**: 10 mins presentation and 5 mins discussion of the final project, this will count 80% of your final grade
 
 ### Evaluation Criteria
 You can choose whether you want to spend more effort on the data collection and preprocessing part, the modelling, the descriptive analysis or the user interaction part. A good project must not necessarily cover all work packages, but it should be well executed in the work packages that are covered. The criteria evaluated will be based on:
