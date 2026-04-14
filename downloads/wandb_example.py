@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import os
 
+import time
+
 import numpy as np
 import wandb
 from sklearn.datasets import fetch_openml
@@ -34,7 +36,7 @@ def main() -> None:
     learning_rate = 0.05
     alpha = 1e-4
     seed = 42
-    epochs = 15
+    epochs = 100
 
     # Simple model
     classifier = SGDClassifier(
@@ -90,6 +92,9 @@ def main() -> None:
             f"epoch={epoch:02d} train_loss={train_loss:.4f} "
             f"val_loss={val_loss:.4f} val_accuracy={val_accuracy:.3f}"
         )
+        
+        # OPTIONAL: Add a small delay to simulate longer training time
+        # time.sleep(2)
 
     run.finish()
 

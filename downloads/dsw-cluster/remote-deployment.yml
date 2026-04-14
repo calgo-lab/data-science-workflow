@@ -42,7 +42,7 @@ spec:
       volumes:
         - name: storage-pvc
           persistentVolumeClaim:
-            claimName: storage-pvc
+            claimName: dsw-pvc
         - name: ssh-key
           secret:
             secretName: ssh-key-secret
