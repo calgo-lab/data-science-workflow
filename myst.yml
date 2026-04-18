@@ -8,6 +8,10 @@ project:
       email: felix.biessmann@bht-berlin.de
     - name: Leonhard Liu
       email: leonhard.liu@bht-berlin.de
+    - name: Vipin Singh
+      email: vipin.singh@bht-berlin.de
+    - name: Nicholas Chandler
+      email: nich1834@bht-berlin.de
   toc:
     - file: intro.md
     - file: DSW-sessions/session1_data_acquisition.ipynb
