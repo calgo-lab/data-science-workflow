@@ -49,3 +49,9 @@ site:
     favicon: calgo-lab-logo.png
     logo: calgo-lab-logo.png
     logo_text: Data Science Workflow & Applications
+sphinx:
+  config:
+    extensions:
+      - sphinxcontrib.bibtex
+    bibtex_bibfiles: ['bibliography.bib']
+    bibtex_reference_style: author_year
