@@ -41,12 +41,12 @@ Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topic
 
 ## Python Environment
 We will be using Jupyter Notebooks for the lecture material and you can download the notebooks and artifacts for each session from the Download section (see Download widget/button at the top). To run the notebooks, you will need to set up a Python environment with the required dependencies.
-The dependencies and the python version are specified in the `pyproject.toml` file, that can be downloaded from the Download section as well. Using [uv](https://docs.astral.sh/uv/) you can setup the environment as follows:
+The dependencies and the python version are specified in the [`pyproject.toml`](pyproject.toml) file, that can be downloaded from the Download section as well. Using [uv](https://docs.astral.sh/uv/) you can setup the environment as follows:
 
 - Create a new virtual environment:
 	```bash
 	uv venv
-	````
+	```
 
 - Install the dependencies:
 	```bash
