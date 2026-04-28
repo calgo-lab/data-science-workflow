@@ -31,3 +31,6 @@ exports/
 DSA/
 old-felix/
 mds_from_teo/
+
+# uv - python environment
+uv.lock

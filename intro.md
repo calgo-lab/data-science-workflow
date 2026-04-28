@@ -25,7 +25,7 @@ Part 1 of the lecture *Data Science Workflow and Applications* will include 5 se
 | ----------- | ------------------------------------------------------------------------- |
 | 09.04.2026  | [Data Acquisition and Labeling](DSW-sessions/session1_data_acquisition.ipynb)          |
 | 16.04.2026  | [Kubernetes Cluster and Experiments Logging](DSW-sessions/session2_cluster.ipynb)      |
-| 23.04.2026  | ⏳ [Data Exploration, Preprocessing & Quality](DSW-sessions/session3_data_quality.ipynb)  |
+| 23.04.2026  | [Data Exploration, Preprocessing & Quality](DSW-sessions/session3_data_quality.ipynb)  |
 | 30.04.2026  | ⏳ [Model Training and Evaluation](DSW-sessions/session4_model_training_evaluation.ipynb) |
 | 07.05.2026  | ⏳ [Dashboards and Demos](DSW-sessions/session5_demos.ipynb)                              |
 
@@ -38,3 +38,17 @@ Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topic
 | 28.05.2026  | ⏳[Matrix Factorization & AutoRec](DSA-sessions/lecture-08.md)                                 |
 | 04.06.2026  | ⏳[Neural Embeddings & Semantic Search](DSA-sessions/lecture-09.md)                            |
 | 11.06.2026  | ⏳[Two-Tower, Evaluation & Retrieval](DSA-sessions/lecture-10.md)                              |
+
+## Python Environment
+We will be using Jupyter Notebooks for the lecture material and you can download the notebooks and artifacts for each session from the Download section (see Download widget/button at the top). To run the notebooks, you will need to set up a Python environment with the required dependencies.
+The dependencies and the python version are specified in the `pyproject.toml` file, that can be downloaded from the Download section as well. Using [uv](https://docs.astral.sh/uv/) you can setup the environment as follows:
+
+- Create a new virtual environment:
+	```bash
+	uv venv
+	````
+
+- Install the dependencies:
+	```bash
+	uv sync
+	```
