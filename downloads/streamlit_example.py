@@ -3,8 +3,8 @@ import streamlit as st
 
 def random_email():
 	return {
-		"subject": str(np.random.choice(["urgent invoice", "meeting reminder", "free gift", "account update"])),
-		"body": str(np.random.choice(["please review", "click now", "open attachment", "see details"])),
+		"subject": str(np.random.choice(["Urgent invoice update", "Meeting reminder", "Free gift card inside", "Account verification needed"])),
+		"body": str(np.random.choice(["Please review the attached note.", "Click now to claim your prize.", "Open attachment for details.", "See details at your convenience."]))
 	}
 
 def model_predict(email, spam_probability):
