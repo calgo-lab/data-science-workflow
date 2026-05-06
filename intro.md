@@ -26,8 +26,8 @@ Part 1 of the lecture *Data Science Workflow and Applications* will include 5 se
 | 09.04.2026  | [Data Acquisition and Labeling](DSW-sessions/session1_data_acquisition.ipynb)          |
 | 16.04.2026  | [Kubernetes Cluster and Experiments Logging](DSW-sessions/session2_cluster.ipynb)      |
 | 23.04.2026  | [Data Exploration, Preprocessing & Quality](DSW-sessions/session3_data_quality.ipynb)  |
-| 30.04.2026  | ⏳ [Model Training and Evaluation](DSW-sessions/session4_model_training_evaluation.ipynb) |
-| 07.05.2026  | ⏳ [Dashboards and Demos](DSW-sessions/session5_demos.ipynb)                              |
+| 30.04.2026  | [Model Training and Evaluation](DSW-sessions/session4_model_training_evaluation.ipynb) |
+| 07.05.2026  | [Dashboards and Demos](DSW-sessions/session5_demos.ipynb)                              |
 
 Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topics around *Recommender Systems*.
 
