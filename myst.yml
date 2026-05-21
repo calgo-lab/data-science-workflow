@@ -19,7 +19,7 @@ project:
     - file: DSW-sessions/session3_data_quality.ipynb
     - file: DSW-sessions/session4_model_training_evaluation.ipynb
     - file: DSW-sessions/session5_demos.ipynb
-    - file: DSA-sessions/lecture-06.md
+    - file: DSA-sessions/session6_recommendation_problem.ipynb
     - file: DSA-sessions/lecture-07.md
     - file: DSA-sessions/lecture-08.md
     - file: DSA-sessions/lecture-09.md
@@ -28,25 +28,10 @@ project:
   # keywords: []
   # github:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  # PDF export removed — offer the reveal.js slides HTML as the download instead.
   downloads:
-    - id: lecture-script
-      title: Lecture-Script (PDF)
-  exports:
-    - format: pdf
-      id: lecture-script
-      output: exports/data-science-workflow.pdf
-      articles:
-        - intro.md
-        - DSW-sessions/session1_data_acquisition.ipynb
-        - DSW-sessions/session2_cluster.ipynb
-        - DSW-sessions/session3_data_quality.ipynb
-        - DSW-sessions/session4_model_training_evaluation.ipynb
-        - DSW-sessions/session5_demos.ipynb
-        - DSA-sessions/lecture-06.md
-        - DSA-sessions/lecture-07.md
-        - DSA-sessions/lecture-08.md
-        - DSA-sessions/lecture-09.md
-        - DSA-sessions/lecture-10.md
+    - file: DSA-sessions/session6_recommendation_problem.slides.html
+      title: Lecture 6 Slides (HTML)
 site:
   template: book-theme
   options:

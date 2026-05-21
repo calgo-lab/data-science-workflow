@@ -38,20 +38,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18.x
-      - name: Install LaTeX Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            latexmk \
-            texlive-latex-base \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-xetex
       - name: Install Jupyter Book (via myst)
         run: npm install -g jupyter-book
-      - name: Build PDF Assets
-        run: jupyter-book build --pdf
       - name: Build HTML Assets
         run: jupyter-book build --html
       - name: Build Jupyter Notebook Slides
@@ -59,7 +47,7 @@ jobs:
           mkdir -p _build/dsw-slides _build/dsa-slides _build/figures
           python -m pip install --upgrade pip nbconvert
           find DSW-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/dsw-slides {}
-          find DSA-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/dsa-slides {}
+          find DSA-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_input_tags hide-input --output-dir _build/dsa-slides {}
           if [ -d figures ]; then cp -R figures/. _build/figures/; fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -89,7 +77,7 @@ jobs:
           python -m pip install --upgrade pip nbconvert
           mkdir -p _build/dsw-slides _build/dsa-slides _build/figures
           find DSW-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/dsw-slides {}
-          find DSA-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --output-dir _build/dsa-slides {}
+          find DSA-sessions -maxdepth 1 -name '*.ipynb' -print0 | xargs -0 -I{} python -m nbconvert --to slides --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_input_tags hide-input --output-dir _build/dsa-slides {}
           if [ -d figures ]; then cp -R figures/. _build/figures/; fi
           cd _build
           if [ -d figures ]; then
