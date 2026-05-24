@@ -1,3 +1,13 @@
+---
+authors:
+  - name: Patrick Erdelt
+    email: perdelt@bht-berlin.de
+  - name: Felix Bießmann
+    email: felix.biessmann@bht-berlin.de
+  - name: Leonhard Liu
+    email: leonhard.liu@bht-berlin.de
+---
+
 # Session 7: Content-Based Methods
 
 ⚠️ <span style="color: orange;">Please note we are currently reworking the lecture and still preparing the course materials. You will find this message wherever the course materials are being updated / not finalized.</span> ⚠️

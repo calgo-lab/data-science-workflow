@@ -31,7 +31,7 @@ project:
   # PDF export removed — offer the reveal.js slides HTML as the download instead.
   downloads:
     - file: DSA-sessions/session6_recommendation_problem.slides.html
-      title: Lecture 6 Slides (HTML)
+      title: Session 6 Slides (HTML)
 site:
   template: book-theme
   options:
