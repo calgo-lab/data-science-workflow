@@ -20,7 +20,7 @@ project:
     - file: DSW-sessions/session4_model_training_evaluation.ipynb
     - file: DSW-sessions/session5_demos.ipynb
     - file: DSA-sessions/session6_recommendation_problem.ipynb
-    - file: DSA-sessions/lecture-07.md
+    - file: DSA-sessions/session7_content_based_methods.ipynb
     - file: DSA-sessions/lecture-08.md
     - file: DSA-sessions/lecture-09.md
     - file: DSA-sessions/lecture-10.md
@@ -32,6 +32,8 @@ project:
   downloads:
     - file: DSA-sessions/session6_recommendation_problem.slides.html
       title: Session 6 Slides (HTML)
+    - file: DSA-sessions/session7_content_based_methods.slides.html
+      title: Session 7 Slides (HTML)
 site:
   template: book-theme
   options:
