@@ -28,12 +28,10 @@ project:
   # keywords: []
   # github:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
-  # PDF export removed — offer the reveal.js slides HTML as the download instead.
-  downloads:
-    - file: DSA-sessions/session6_recommendation_problem.slides.html
-      title: Session 6 Slides (HTML)
-    - file: DSA-sessions/session7_content_based_methods.slides.html
-      title: Session 7 Slides (HTML)
+  # Slides downloads are set PER PAGE (in each session notebook's cell-0
+  # frontmatter) so every page links only its own slides. A project-level
+  # `downloads` list here would otherwise appear on every page — which made the
+  # Session 7 page also offer the Session 6 slides.
 site:
   template: book-theme
   options:

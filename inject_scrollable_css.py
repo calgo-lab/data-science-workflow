@@ -18,6 +18,7 @@ Used by both `DSA/render_preview.sh` (local preview) and
 site behave identically.
 """
 import pathlib
+import re
 import sys
 
 CSS = """<style id="scrollable-slides">
@@ -59,12 +60,13 @@ CSS = """<style id="scrollable-slides">
     box-sizing: border-box;
     padding-top: 32px;     /* breathing room so the title isn't flush at viewport top */
     padding-bottom: 25vh;  /* tail-room so the last line isn't flush at viewport edge */
-    /* Constrain content to a ~960px column centered in the viewport (matching
-       Reveal's old canvas width). On screens wider than 1040px the side
-       padding grows to keep the column centered; below that we fall back to
-       a 40px minimum so narrow laptops don't waste space. */
-    padding-left: max(40px, calc(50vw - 480px));
-    padding-right: max(40px, calc(50vw - 480px));
+    /* Left-align the ~960px reading column. It used to be centered via
+       calc(50vw - 480px), but on a low-res / mirrored projector the large
+       logical viewport made that left padding huge and pushed content off the
+       right edge — only the left part showed. Anchor at the left instead and
+       just cap the width on wide screens. Not tuned for very small displays. */
+    padding-left: 40px;
+    padding-right: max(40px, calc(100vw - 1000px));
 }
 .reveal .slides > section > section::-webkit-scrollbar {
     width: 8px;
@@ -85,10 +87,17 @@ CSS = """<style id="scrollable-slides">
 
 
 def inject(html_path: pathlib.Path) -> str:
-    """Inject CSS into the given file. Returns a one-line status string."""
+    """Inject CSS into the given file, or refresh an existing block in place.
+
+    Returns a one-line status string. If an `id="scrollable-slides"` block is
+    already present it is replaced with the current CSS — so the live preview
+    and the published slides can be patched without a full re-render."""
     html = html_path.read_text()
     if 'id="scrollable-slides"' in html:
-        return f"   already injected, skipping ({html_path})"
+        new = re.sub(r'<style id="scrollable-slides">.*?</style>',
+                     lambda _m: CSS, html, count=1, flags=re.DOTALL)
+        html_path.write_text(new)
+        return f"   refreshed existing block ({html_path})"
     if "</head>" not in html:
         raise SystemExit(f"error: no </head> found in {html_path}")
     html_path.write_text(html.replace("</head>", CSS + "\n</head>", 1))

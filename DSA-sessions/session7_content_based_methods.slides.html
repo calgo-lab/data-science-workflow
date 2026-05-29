@@ -7496,12 +7496,13 @@ main {
     box-sizing: border-box;
     padding-top: 32px;     /* breathing room so the title isn't flush at viewport top */
     padding-bottom: 25vh;  /* tail-room so the last line isn't flush at viewport edge */
-    /* Constrain content to a ~960px column centered in the viewport (matching
-       Reveal's old canvas width). On screens wider than 1040px the side
-       padding grows to keep the column centered; below that we fall back to
-       a 40px minimum so narrow laptops don't waste space. */
-    padding-left: max(40px, calc(50vw - 480px));
-    padding-right: max(40px, calc(50vw - 480px));
+    /* Left-align the ~960px reading column. It used to be centered via
+       calc(50vw - 480px), but on a low-res / mirrored projector the large
+       logical viewport made that left padding huge and pushed content off the
+       right edge — only the left part showed. Anchor at the left instead and
+       just cap the width on wide screens. Not tuned for very small displays. */
+    padding-left: 40px;
+    padding-right: max(40px, calc(100vw - 1000px));
 }
 .reveal .slides > section > section::-webkit-scrollbar {
     width: 8px;
