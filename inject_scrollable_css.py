@@ -73,6 +73,14 @@ CSS = """<style id="scrollable-slides">
     background: rgba(0,0,0,0.25);
     border-radius: 4px;
 }
+/* nbconvert bundles JupyterLab's `.jp-OutputArea-output pre { word-break: break-all }`,
+   which lets printed captions break mid-word once a line is wider than the centered
+   ~960px column above (e.g. "Cosine" → "Cosin" + "e"). Restore wrapping at word
+   boundaries; keep break-word only as a fallback for a single token too long to fit. */
+.reveal .jp-OutputArea-output pre {
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+}
 </style>"""
 
 
