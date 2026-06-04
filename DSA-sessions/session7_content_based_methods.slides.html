@@ -7458,51 +7458,50 @@ main {
 <!-- End of mathjax configuration --><!-- Reveal Theme -->
 <link href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme" rel="stylesheet"/>
 <style id="scrollable-slides">
-/* Force .slides to fill the viewport at top-left with no scaling. Reveal
-   inlines `width: 960px; height: 700px; inset: 50% auto auto 50%;
-   transform: translate(-50%, -50%) scale(X);` on this div to position its
-   fixed 960x700 canvas centered in the window. If we override ONLY the
-   transform, `inset: 50% auto auto 50%` still pushes the container's
-   top-left to viewport center → content lands in the bottom-right quadrant.
-   We have to override inset/width/height/transform together. */
+/* Reveal scales a fixed 960x700 canvas to fit the window; long lecture slides
+   overflow it and get clipped. Make the deck an unscaled, full-viewport canvas
+   instead. Reveal scales via CSS `zoom` (not transform!) in this build, so we
+   must reset zoom too — otherwise the canvas is enlarged (~1.1x), which both
+   shifts content right and pushes the slide title above the top edge. Override
+   inset/size/zoom/transform together. */
 .reveal .slides {
     inset: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
+    zoom: 1 !important;
     transform: none !important;
 }
-/* Force every section to top-left of its container at full width with no
-   transform. Reveal applies inline `top`, `left`, `width`, and `transform`
-   styles via JS to center the 960x700 canvas — overriding all four makes the
-   slide actually fill the viewport. (Applied to past/future too; they're
-   display:none per reveal.css, so transitions aren't visibly affected.) */
+/* Every section fills the viewport, top-left, unscaled. Reveal sets inline
+   top/left/width/transform (and would vertically centre the canvas — which
+   clipped the slide title above the top edge); override all of them plus
+   height so the active slide is a full-height box. */
 .reveal .slides > section,
 .reveal .slides > section > section {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
+    height: 100vh !important;
+    zoom: 1 !important;
     transform: none !important;
 }
-/* Single scroll container per slide — only the inner (leaf) section. With
-   nested scroll containers (outer wrapper + inner), reaching the inner's
-   scroll-bottom pinned it at scrollTop=max while the outer started scrolling,
-   so the user could never scroll back up to the slide title. The
-   padding-bottom is tail-room so the last line isn't flush at the viewport
-   edge when fully scrolled. */
+/* The active slide = a TOP-aligned vertical scroll container. display:block +
+   explicit top padding keep the title at the top, not mid-screen. */
 .reveal .slides > section > section.present {
-    height: 100vh !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    box-sizing: border-box;
-    padding-top: 32px;     /* breathing room so the title isn't flush at viewport top */
-    padding-bottom: 25vh;  /* tail-room so the last line isn't flush at viewport edge */
-    /* Left-align the ~960px reading column. It used to be centered via
-       calc(50vw - 480px), but on a low-res / mirrored projector the large
-       logical viewport made that left padding huge and pushed content off the
-       right edge — only the left part showed. Anchor at the left instead and
-       just cap the width on wide screens. Not tuned for very small displays. */
-    padding-left: 40px;
-    padding-right: max(40px, calc(100vw - 1000px));
+    box-sizing: border-box !important;
+    display: block !important;
+    padding: 32px 24px 25vh 24px !important;   /* top / sides / bottom tail-room */
+}
+/* The reading column: cap the width and centre (or left-anchor) it with
+   margin:auto. Works at any viewport with no viewport math, and — because
+   margin:auto beats JupyterLab's `.jp-Cell` left margin — it also cancels the
+   hidden In[]/Out[] prompt gutter that was pushing content to the right. */
+.reveal .slides > section > section.present > * {
+    max-width: 960px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
 }
 .reveal .slides > section > section::-webkit-scrollbar {
     width: 8px;
@@ -7512,9 +7511,7 @@ main {
     border-radius: 4px;
 }
 /* nbconvert bundles JupyterLab's `.jp-OutputArea-output pre { word-break: break-all }`,
-   which lets printed captions break mid-word once a line is wider than the centered
-   ~960px column above (e.g. "Cosine" → "Cosin" + "e"). Restore wrapping at word
-   boundaries; keep break-word only as a fallback for a single token too long to fit. */
+   which breaks printed captions mid-word. Restore word-boundary wrapping. */
 .reveal .jp-OutputArea-output pre {
     word-break: normal !important;
     overflow-wrap: break-word !important;
@@ -8388,8 +8385,6 @@ Embeddings say Batman is closer to The Punisher (0.49) than to Notting Hill (0.1
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Evaluating-a-ranked-list:-Precision-&amp;-Recall">Evaluating a ranked list: Precision &amp; Recall<a class="anchor-link" href="#Evaluating-a-ranked-list:-Precision-&amp;-Recall">¶</a></h2><p>Label each returned item <strong>relevant</strong> or <strong>not</strong>, then compare to the truth:</p>
-<div style="display:flex; gap:3em; align-items:center; justify-content:center; margin-top:0.6em;">
-<div>
 <table>
 <thead>
 <tr>
@@ -8411,16 +8406,13 @@ Embeddings say Batman is closer to The Punisher (0.49) than to Notting Hill (0.1
 </tr>
 </tbody>
 </table>
-</div>
-<div style="text-align:center; font-size:0.95em;">
-<p>$$\text{Precision}=\frac{TP}{TP+FP}$$</p>
-<p><em>of what I returned, how much was good?</em></p>
-<p>$$\text{Recall}=\frac{TP}{TP+FN}$$</p>
-<p><em>of all good items, how many did I find?</em></p>
-<p>$$F_1 = \frac{2\,P\,R}{P+R}$$</p>
-<p><em>harmonic mean — handy when balancing both.</em></p>
-</div>
-</div>
+<p>$$\text{Precision}=\frac{TP}{TP+FP}\qquad\qquad \text{Recall}=\frac{TP}{TP+FN}$$</p>
+<p>$$F_1 = \frac{2\,P\,R}{P+R}\qquad(\text{harmonic mean of }P,R)$$</p>
+<ul>
+<li><strong>Precision</strong> — of what I returned, how much was good?</li>
+<li><strong>Recall</strong> — of all good items, how many did I find?</li>
+<li><strong>F₁</strong> — their harmonic mean, handy when balancing both.</li>
+</ul>
 <p>Return <strong>more</strong> items → recall rises, precision usually falls. Report metrics <strong>@k</strong> (the top-k items).</p>
 </div>
 </div>

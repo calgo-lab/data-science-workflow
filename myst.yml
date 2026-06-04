@@ -21,7 +21,7 @@ project:
     - file: DSW-sessions/session5_demos.ipynb
     - file: DSA-sessions/session6_recommendation_problem.ipynb
     - file: DSA-sessions/session7_content_based_methods.ipynb
-    - file: DSA-sessions/lecture-08.md
+    - file: DSA-sessions/session8_matrix_factorization.ipynb
     - file: DSA-sessions/lecture-09.md
     - file: DSA-sessions/lecture-10.md
   # description:
