@@ -35,8 +35,8 @@ Starting from 14.05.2026, lecturer *Leonhard Liu* will take over, covering topic
 | ----------- | ----------------------------------------------------------------------------------- |
 | 14.05.2026  | ⏳[The Recommendation Problem](DSA-sessions/session6_recommendation_problem.ipynb)                                     |
 | 21.05.2026  | ⏳[Content-Based Methods](DSA-sessions/session7_content_based_methods.ipynb)                   |
-| 28.05.2026  | ⏳[Matrix Factorization & AutoRec](DSA-sessions/lecture-08.md)                                 |
-| 04.06.2026  | ⏳[Neural Embeddings & Semantic Search](DSA-sessions/lecture-09.md)                            |
+| 28.05.2026  | ⏳[Matrix Factorization & AutoRec](DSA-sessions/session8_matrix_factorization.ipynb)           |
+| 04.06.2026  | ⏳[Neural Embeddings & Semantic Search](DSA-sessions/session9_neural_embeddings.ipynb)         |
 | 11.06.2026  | ⏳[Two-Tower, Evaluation & Retrieval](DSA-sessions/lecture-10.md)                              |
 
 ## Python Environment
